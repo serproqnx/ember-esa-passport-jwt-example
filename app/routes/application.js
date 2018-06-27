@@ -1,15 +1,10 @@
-import Ember from 'ember';
-import ApplicationRouteMixin from 'ember-simple-auth/mixins/application-route-mixin';
+import Route from '@ember/routing/route'
 
-export default Ember.Route.extend(
-{
-
+export default Route.extend({
   actions: {
-    error: function(reason, transition) {
+    error: function() {
       this.transitionTo('/login');
       return false;
     }
   }
-
-}
-);
+});

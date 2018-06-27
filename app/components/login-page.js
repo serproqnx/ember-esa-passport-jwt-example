@@ -1,9 +1,10 @@
+import Component from '@ember/component'
+import { inject } from '@ember/service'
 
-import Ember from 'ember'
-export default Ember.Component.extend({
+export default Component.extend({
 
-  authManager: Ember.inject.service('session'),
-  router: Ember.inject.service(),
+  authManager: inject('session'),
+  router: inject(),
 
   actions: {
     authenticate() {
