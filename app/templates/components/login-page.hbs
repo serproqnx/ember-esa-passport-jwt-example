@@ -1,0 +1,9 @@
+<h1>Login page</h1>
+<p>Use User1 / User123</p>
+
+<form {{action 'authenticate' on='submit'}}>
+  {{input value=login placeholder='Login'}}<br>
+  {{input value=password placeholder='Password' type='password'}}<br>
+  <button type="submit">Login</button>
+</form>
+  <button {{action 'invalidateSession'}}>Logout</button>
